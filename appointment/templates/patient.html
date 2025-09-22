@@ -1,0 +1,59 @@
+
+
+
+{% extends 'base_p.html' %}
+
+{% block content %}
+
+<font size="+1" color="#ff3300">{{msg}}</font>
+
+ <div class="heading text-center mx-auto">
+              <h3 class="title-w3l">{{s}}<span class="inn-text"> Login</span></h3>
+            </div>
+
+
+
+<center><br><br>
+
+ <div class="form-inner-cont ">
+  <div class="form-grids">
+   <div class="form-input">
+
+
+
+
+<form action="/ploginaction/" method="post">
+{% csrf_token %}
+
+                         <input type="text" name="email"  placeholder="Enter your Email"
+                                required="" />
+                        </div>
+                        
+						<div class="form-input">
+                            <input type="password" name="pwd" placeholder="Enter password"
+                                required />
+                            <input type="text" name="gender" placeholder="Gender" required="" />
+                            <input type="text" name="age" placeholder="Enter Age" required="" />
+                            <input type="text" name="healthissue" placeholder="Enter Your HealthIssue" required="" />
+                            <input type="text" name="phn" placeholder="Enter Contact Number" required="" />
+                            <input type="text" name="addr" placeholder="Address" required="" />
+                        </div>	
+						
+						<div class="form-input">
+                        </div>
+
+						<div class="form-input">
+                            <button class="btn btn-style btn-primary">Login</button>
+                        </div>	
+						
+
+
+</form>
+
+</div>
+</div>
+
+
+</center>
+
+{% endblock %}

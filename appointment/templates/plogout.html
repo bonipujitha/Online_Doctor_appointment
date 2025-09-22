@@ -1,0 +1,40 @@
+
+
+
+{% extends 'base_p.html' %}
+
+{% block content %}
+
+<font size="+1" color="#ff3300">{{msg}}</font>
+
+ <div class="heading text-center mx-auto">
+              <h3 class="title-w3l">{{s}}<span class="inn-text"> Login</span></h3>
+            </div>
+
+
+
+<center><br><br>
+
+ <div class="form-inner-cont ">
+  <div class="form-grids">
+   <div class="form-input">
+
+
+
+
+<form action="/flogoutaction/" method="post">
+{% csrf_token %}
+
+                         
+						
+
+
+</form>
+
+</div>
+</div>
+
+
+</center>
+
+{% endblock %}

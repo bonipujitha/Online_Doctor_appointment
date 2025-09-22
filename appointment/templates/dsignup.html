@@ -1,0 +1,34 @@
+{% extends 'base_d.html' %}
+
+{% block content %}
+
+<font size="+2" color="#6633cc">{{msg}}</font>
+  <div class="heading text-center mx-auto">
+    <h3 class="title-w3l">Doctor <span class="inn-text"> Signup</span></h3>
+  </div>
+
+  <center><br><br>
+    <div class="form-inner-cont">
+      <div class="form-grids">
+        <form action="/dsignupaction/" method="post">
+    
+          {% csrf_token %}
+          
+            
+            <input type="text" name="name" placeholder="Enter Your Full Name" required="" />
+            <input type="text" name="email" placeholder="Enter Your Email Address" required="" />
+            <input type="password" name="pwd" placeholder="Enter password" required="" />
+            <input type="text" name="qua" placeholder="Enter Qualification" required="" />
+            <input type="text" name="phn" placeholder="Enter Contact Number" required="" />
+            <input type="text" name="addr" placeholder="Address" required="" />
+
+      </div>
+
+
+          <button class="btn btn-style btn-primary">Signup</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </center>
+{% endblock %}

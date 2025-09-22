@@ -1,0 +1,54 @@
+
+
+
+{% extends 'base_d.html' %}
+
+{% block content %}
+
+<font size="+1" color="#ff3300">{{msg}}</font>
+
+ <div class="heading text-center mx-auto">
+              <h3 class="title-w3l">{{s}}<span class="inn-text"> Login</span></h3>
+            </div>
+
+
+
+<center><br><br>
+
+ <div class="form-inner-cont ">
+  <div class="form-grids">
+   <div class="form-input">
+
+
+
+
+<form action="/dloginaction/" method="post">
+{% csrf_token %}
+
+                         <input type="text" name="email"  placeholder="Enter your Email"
+                                required="" />
+                        </div>
+                        
+						<div class="form-input">
+                            <input type="password" name="pwd" placeholder="Enter password"
+                                required />
+                        </div>	
+						
+						<div class="form-input">
+                        </div>
+
+						<div class="form-input">
+                            <button class="btn btn-style btn-primary">Login</button>
+                        </div>	
+						
+
+
+</form>
+
+</div>
+</div>
+
+
+</center>
+
+{% endblock %}
